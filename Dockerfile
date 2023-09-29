@@ -31,7 +31,7 @@ RUN flutter pub get
 RUN flutter build web
 
 # Use a lightweight base image for the final image
-FROM gcr.io/distroless/web
+FROM gcr.io/distroless/web:1.0
 
 # Set the working directory
 WORKDIR /usr/src/app
