@@ -23,6 +23,8 @@ RUN flutter pub get
 COPY . .
 
 RUN dart pub get
+RUN flutter pub get
+
 # Build the Flutter web application
 RUN pub run build_runner build --output=web:build
 
