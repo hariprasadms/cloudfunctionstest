@@ -28,7 +28,7 @@ RUN dart pub get
 RUN flutter pub get
 
 # Build the Flutter web application
-RUN pub run build_runner build --output=web:build
+RUN flutter build web
 
 # Use a lightweight base image for the final image
 FROM gcr.io/distroless/web
