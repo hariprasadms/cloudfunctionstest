@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "111609387497",
+    "project_id": "cloud-functions-testing-337a9",
+    "storage_bucket": "cloud-functions-testing-337a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111609387497:android:bc73c15e9b20d7fe191378",
+        "android_client_info": {
+          "package_name": "com.mycompany.cloudfunctionstesting"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXQBuWMO0nYVnIAH9fbVbPqtQthzg7W-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,1 @@
+ build/web/index.html build/web/favicon.png build/web/icons/Icon-192.png build/web/icons/Icon-512.png:  /Users/hpmogalli/Downloads/cloudfunctionstest/web/index.html /Users/hpmogalli/Downloads/cloudfunctionstest/web/favicon.png /Users/hpmogalli/Downloads/cloudfunctionstest/web/icons/Icon-192.png /Users/hpmogalli/Downloads/cloudfunctionstest/web/icons/Icon-512.png
