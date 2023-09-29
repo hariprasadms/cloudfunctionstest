@@ -17,6 +17,11 @@ ENV PATH="/flutter/bin:${PATH}"
 COPY pubspec.yaml pubspec.lock ./
 
 # Get the dependencies (this step is separated to leverage Docker cache)
+
+RUN dart pub global activate build_runner
+
+ENV PATH="/root/.pub-cache/bin:${PATH}"
+
 RUN flutter pub get
 
 # Copy the entire project to the container
