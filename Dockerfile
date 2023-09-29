@@ -1,5 +1,5 @@
 # Use a specific version of the Dart SDK and Alpine Linux as the base image
-FROM google/dart:2.15 AS build
+FROM google/dart:2.15.1 AS build
 
 # Install unzip tool
 RUN apt-get update && apt-get install -y unzip
@@ -21,6 +21,8 @@ RUN flutter pub get
 
 # Copy the entire project to the container
 COPY . .
+
+RUN rm -rf .dart_tool/
 
 RUN dart pub get
 RUN flutter pub get
