@@ -22,20 +22,17 @@ RUN flutter pub get
 # Copy the entire project to the container
 COPY . .
 
-# Build the Flutter web app
-RUN flutter build web
+# Build the Flutter web application
+RUN pub run build_runner build --output=web:build
 
-# Use a lightweight Alpine Linux as the final base image
-FROM alpine:latest
+# Use a lightweight base image for the final image
+FROM gcr.io/distroless/web
 
-# Set the working directory in the container
-WORKDIR /app
+# Set the working directory
+WORKDIR /usr/src/app
 
-# Copy the built Flutter web app from the build stage
-COPY --from=build /app/build/web /app
+# Copy the build output from the previous stage to the final image
+COPY --from=build /app/build /usr/src/app/build
 
-# Expose the port the app runs on (default is 80 for HTTP server)
-EXPOSE 80
-
-# Start the Flutter web app when the container starts
-CMD ["python3", "-m", "http.server", "80"]
+# Specify the command to run the web server
+CMD ["build_runner", "serve", "-o", "web:build"]
