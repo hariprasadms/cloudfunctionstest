@@ -7,9 +7,6 @@ RUN apt-get update && apt-get install -y unzip
 # Set the working directory in the container
 WORKDIR /app
 
-# Specify the Flutter version you want to install
-ARG FLUTTER_VERSION=3.10.4
-
 # Install Flutter
 RUN git clone https://github.com/flutter/flutter.git /flutter && /flutter/bin/flutter --version
 
