@@ -22,8 +22,6 @@ RUN flutter pub get
 # Copy the entire project to the container
 COPY . .
 
-rm -rf build/
-
 RUN dart pub get
 # Build the Flutter web application
 RUN pub run build_runner build --output=web:build
